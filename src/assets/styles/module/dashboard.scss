@@ -1,0 +1,57 @@
+.dashboard--container {
+    .dashboard--wrapper {
+        .hero--section {
+            background-image: url('../../images/heroImage.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100% 100%;
+            height: 700px;
+            width: 100vw;
+
+            .main--title {
+                background: $white;
+                padding: 10px;
+            }
+        }
+
+        .title {
+            font-size: 30px;
+            font-weight: $font-medium;
+        }
+
+        .about--wrapper {
+            width: calc(100% - 200px);
+            margin: 0 auto;
+            padding: 50px 0;
+
+            .facts--container {
+                width: 100%;
+                background: $white;
+                border: 1px solid #e5e5e5;
+                box-shadow: 0 2px 20px 0 rgba(0, 0, 0, .08);
+                flex-grow: 1;
+                margin: 0 10px 20px;
+                padding: 20px;
+                border-radius: 5px;
+
+                .facts--details {
+                    padding-left: 20px;
+                    list-style: circle;
+
+                    .fact {
+                        color: #828282;
+                        line-height: 20px;
+                    }
+                }
+            }
+        }
+
+        .sensors--list-container {
+            width: calc(100% - 100px);
+
+            .sensors--list {
+                width: 100%;
+            }
+        }
+    }
+}
