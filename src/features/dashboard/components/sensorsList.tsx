@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { sensorTableHeader } from '../constant/dashboard'
+import { PbBody, PbCell, PbHead, PbRow, PbTable } from 'shared/components/table';
 
 
 interface ITableProps {
@@ -37,30 +38,30 @@ const SensorsList = () => {
             <div>
                 <h3 className='text--center'>Area wise sensor details</h3>
             </div>
-            <table className='sensors--list'>
-                <thead>
-                    <tr>
+            <PbTable className='sensors--list'>
+                <PbHead>
+                    <PbRow>
                         {sensorTableHeader.map(({ name }, index) =>
-                            <th key={index}>{name}</th>
+                            <PbCell key={index}>{name}</PbCell>
                         )}
-                    </tr>
-                </thead>
-                <tbody>
+                    </PbRow>
+                </PbHead>
+                <PbBody>
                     {sensorsList && sensorsList.map(({ sensor_name, sensor_type, location, severity, temperature, latitude, co, longitude, pm25 }, index: number) =>
-                        <tr key={index}>
-                            <td>{sensor_name}</td>
-                            <td>{sensor_type}</td>
-                            <td>{location}</td>
-                            <td>{severity}</td>
-                            <td>{temperature}</td>
-                            <td>{latitude}</td>
-                            <td>{co}</td>
-                            <td>{longitude}</td>
-                            <td>{pm25}</td>
-                        </tr>
+                        <PbRow key={index}>
+                            <PbCell>{sensor_name}</PbCell>
+                            <PbCell>{sensor_type}</PbCell>
+                            <PbCell>{location}</PbCell>
+                            <PbCell>{severity}</PbCell>
+                            <PbCell>{temperature}</PbCell>
+                            <PbCell>{latitude}</PbCell>
+                            <PbCell>{co}</PbCell>
+                            <PbCell>{longitude}</PbCell>
+                            <PbCell>{pm25}</PbCell>
+                        </PbRow>
                     )}
-                </tbody>
-            </table>
+                </PbBody>
+            </PbTable>
         </div>
     )
 }
