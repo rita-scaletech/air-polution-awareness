@@ -8,7 +8,7 @@ const Pollutants = () => {
                 {pollutantsDetails.map(({ title, info }: any, index: number) => {
                     return (
                         <div key={index}>
-                            <p className='fact mb--10'>
+                            <p className='text--black font-regular font-size--lg mb--5 mt--10'>
                                 {title}
                             </p>
                             <li className='fact mb--10'>

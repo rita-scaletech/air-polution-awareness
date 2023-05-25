@@ -1,6 +1,7 @@
 .d--inline-block {
 	@extend %d--inline-block;
 }
+
 /* Width
 ------------------------------------------------------------------------------*/
 
@@ -186,6 +187,7 @@
 .height--full-viewport {
 	height: $full-viewport-height;
 }
+
 .height--fit-content {
 	height: fit-content !important;
 }
@@ -344,6 +346,7 @@
 .mt--60 {
 	@include marginTop(60px);
 }
+
 .mt--65 {
 	@include marginTop(65px);
 }
@@ -860,6 +863,7 @@
 .font-family--oswald {
 	font-family: $font-oswald;
 }
+
 .font-family--rubik {
 	font-family: $font-rubik;
 }
@@ -1043,6 +1047,7 @@
 .opacity--100 {
 	opacity: 1;
 }
+
 /*Object-fit
 ------------------------------------------------------------------------*/
 
@@ -1128,6 +1133,7 @@
 
 .fill--white {
 	fill: $white;
+
 	&.with-opacity-50 {
 		opacity: 0.5;
 	}
@@ -1178,9 +1184,11 @@
 
 .text--white {
 	color: $white;
+
 	&.with-opacity-50 {
 		opacity: 0.5;
 	}
+
 	&.with-opacity-70 {
 		opacity: 0.7;
 	}
@@ -1212,6 +1220,7 @@
 .no--bg {
 	background: transparent;
 }
+
 .bg--grey {
 	@include getShadesColorClasses($grey, 'background-color');
 }
@@ -1222,6 +1231,7 @@
 
 .bg--white {
 	background-color: $white;
+
 	&.with-opacity-10 {
 		opacity: 0.1;
 	}
@@ -1309,6 +1319,7 @@
 .border-radius--half {
 	border-radius: $border-radius-circle;
 }
+
 .border-radius--5 {
 	border-radius: 5px;
 }
@@ -1338,4 +1349,60 @@
 .error {
 	color: getColor($red, 200);
 	@include marginTop(10px);
+}
+
+
+
+.table-responsive {
+	height: 100%;
+	border-radius: 8px;
+	border: 1px solid #bdbdbd;
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
+
+	.table {
+		width: 100%;
+		margin: 0;
+		border-spacing: 0px;
+
+		thead {
+			tr {
+				background-color: #e7eaec;
+				border: 1px solid #bdbdbd;
+
+				.table-title {
+					font-size: 16px;
+					font-weight: $font-semi-bold;
+					padding: 12px 10px;
+
+					&:first-child {
+						border-radius: 5px 0 0 0;
+					}
+
+					&:last-child {
+						border-radius: 0 5px 0 0;
+					}
+				}
+			}
+		}
+
+		tbody {
+			color: rgba(0, 0, 0, 0.7);
+
+			.cell {
+				padding: 5px 10px;
+				border-bottom: 1px solid #97979b;
+
+			}
+
+			.table-row {
+				font-weight: 400;
+				font-size: 15px;
+				line-height: 22px;
+				vertical-align: middle;
+			}
+		}
+	}
 }
