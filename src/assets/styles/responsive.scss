@@ -1,118 +1,100 @@
-@media screen and (max-width: 1600px) {
-}
-
-@media screen and (max-width: 1440px) {
-	// Login Page
-	.login {
-		.logo-wrapper {
-			margin-bottom: 40px;
-
-			.logo_nextedgelogo {
-				max-width: 250px;
-			}
-
-			.logo_reelanalyticslogo {
-				max-width: 100px;
-			}
-		}
-
-		.form {
-			.form-item {
-				.input-field {
-					min-height: 60px;
-				}
-
-				.password-icon {
-					top: 16px;
-				}
-			}
-
-			.checkbox {
-				margin-bottom: 40px;
-			}
-
-			.login-btn {
-				min-height: 60px;
-			}
-		}
-	}
-}
-
-@media screen and (max-width: 1280px) {
-}
-
-@media screen and (max-width: 1280px) and (min-width: 1024px) {
-}
-
-@media screen and (max-width: 1024px) {
-	// Login Page
-	.login {
-		.logo-wrapper {
-			margin-bottom: 30px;
-
-			.logo_nextedgelogo {
-				max-width: 200px;
-			}
-			.logo_reelanalyticslogo {
-				max-width: 80px;
-			}
-		}
-
-		.form {
-			.form-item {
-				.input-field {
-					min-height: 50px;
-				}
-
-				.password-icon {
-					top: 11px;
-				}
-			}
-
-			.checkbox {
-				margin-bottom: 35px;
-			}
-
-			.login-btn {
-				min-height: 50px;
-			}
-		}
-	}
-}
-
-@media screen and (max-width: 992px) {
-	.show--lg {
-		display: none;
-	}
-
-	.hide--lg {
-		display: block;
-	}
-}
 @media screen and (max-width: 768px) {
-	.show--md {
-		display: none;
+	.dashboard--container {
+		.dashboard--wrapper {
+			.title {
+				font-size: 23px;
+				font-weight: 400;
+			}
+
+			.about--wrapper {
+				width: calc(100% - 50px);
+			}
+
+			.hero--section {
+				.header {
+					h1 {
+						font-size: 30px;
+					}
+				}
+			}
+
+			.sensors--list-container {
+				width: calc(100% - 50px);
+
+				.table-responsive {
+					width: calc(100vw - 50px);
+					overflow: scroll;
+				}
+			}
+
+			.sensors--list-container {
+				.sensors--list {
+					width: 100vw !important;
+
+					.list-column-header,
+					.list-rows {
+						width: 100vw;
+						overflow-x: scroll;
+					}
+				}
+			}
+		}
 	}
 
-	.hide--md {
-		display: block;
+	.table-responsive {
+		.table {
+			tbody {
+				width: 100vw;
+				overflow-x: scroll;
+			}
+		}
 	}
 }
 
-@media screen and (max-width: 576px) {
-	.show--sm {
-		display: none;
-	}
+@media screen and (max-width: 668px) {
+	.dashboard--container {
+		.dashboard--wrapper {
+			.about--wrapper {
+				flex-direction: column;
 
-	.hide--sm {
-		display: block;
+				.facts--container {
+					width: unset;
+				}
+			}
+		}
 	}
 }
+
 @media screen and (max-width: 425px) {
-	.show--xs {
-		display: none;
-	}
-	.hide--xs {
-		display: block;
+	.dashboard--container {
+		.dashboard--wrapper {
+			.hero--section {
+				.header {
+					padding: 10px;
+
+					h1 {
+						font-size: 20px;
+					}
+
+					p {
+						a {
+							font-size: 12px;
+						}
+					}
+				}
+			}
+
+			.about--wrapper {
+				padding: 20px 0;
+			}
+
+			.sensors--list-container {
+				padding: 20px 0;
+
+				h3 {
+					font-size: 20px;
+				}
+			}
+		}
 	}
 }
